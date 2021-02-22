@@ -27,7 +27,7 @@ Inside this loop, change the value of each property to 0
 
 function objectLooper(number) {
     for (let key in number) {
-        // Code here
+        number[key] = 0
     }
     return number;
 };
@@ -51,7 +51,9 @@ If a value is greater than 3,000,000 set it to 0
 
 function stateLooper(obj) {
 	for (let key in obj) {
-		// Code here
+		if (obj[key] > 3000000) {
+            obj[key] = 0
+        }
 	}
 	return obj;
 };
@@ -66,7 +68,12 @@ Once all falsy values and their properties are removed, return the object
 */
 
 function cleanUser(obj) {
-    // Code here
+    for(let key in obj) {
+        if (!obj[key]) {
+            delete obj[key]
+        }
+    }
+    return obj
 };
 
 
@@ -77,7 +84,12 @@ Create a function called maxedOut that takes a user object and loops over that o
 Return the updated user object
 */
 
-// Code here
+function maxedOut (obj) {
+    for (let key in obj) {
+        obj[key] = "max"
+    }
+    return obj
+};
 
 
 
@@ -115,7 +127,7 @@ Above you are given the object animalCount
 Destructure this object so that you have 3 distinct variables with values matching those of the properties from animalCount
 */
 
-// Code here
+ const {cats, dogs, mice} = animalCount;
 
 
 
@@ -135,7 +147,7 @@ These variables should be: students, mentors and instructors
 Set the value of students to be 24, mentors to be 3, and instructors to be 5
 */
 
-// Code here
+const {students, mentors, instructors} = {students: 24, mentors: 3, instructors: 5};
 
 
 
@@ -147,7 +159,13 @@ Give these properties the value true if you speak the language or false if you d
 Use destructuring to assign the values of these properties to new variables
 */
 
-// Code here
+let languages = {
+    french: false,
+    english: true,
+    spanish: true
+};
+
+let {french, english, spanish} = {french: false, english: true, spanish: false};
 
 
 
@@ -182,7 +200,11 @@ In the function, use object destructuring to assign the values of these properti
 Subtract num2 from num1 and return the result
 */
 
-// Code here
+function subtraction(object) {
+    const {num1, num2} = object
+    const difference = num1 - num2
+    return difference
+};
 
 
 
@@ -195,7 +217,10 @@ The values of these properties will be a number representing the count of that a
 Using object destructuring, return the total sum of the counts of these animals
 */
 
-// Code here
+function zooAnimals(object) {
+    const {lion, tiger, bear} = object
+    return  object.lion + object.tiger + object.bear 
+};
 
 
 
@@ -224,7 +249,9 @@ Return from this function a greeting sentence that should say "Hello, <title> <n
 Title and name in this sentence should be replaced with the values of the destructured object variables 
 */
 
-// Code here
+function greeting({title, name}) {
+    return `Hello, ${title} ${name}!`
+};
 
 
 
