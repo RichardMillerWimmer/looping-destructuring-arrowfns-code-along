@@ -264,7 +264,13 @@ One of these properties will be truthy and the other will be falsy
 Return the value that is truthy
 */
 
-// Code here
+function truthyFalsy({number, string}) {
+    if (!number) {
+        return string
+    } else if (!string) {
+        return number
+    }
+};
 
 
 
@@ -278,7 +284,13 @@ You should not use the ES5 function declaration or function expression syntax in
 Your function should also be contained within a single line
 */
 
-// Code here
+let isGreaterThanTwenty = (num) => {
+    if (num > 20) {
+        return true
+    } else {
+        return false
+    }
+}; 
 
 
 
@@ -291,7 +303,7 @@ You should not use the ES5 function declaration or function expression syntax in
 Your function should also be contained within a single line
 */
 
-// Code here
+let seven = () => 7
 
 
 
@@ -319,7 +331,11 @@ function double(num) {
 };
 */
 
-// Code here
+let add = (num1, num2) => num1 + num2
+
+let subtract = (num1, num2) => num1 - num2
+
+let double = (num) => num * 2
 
 
 
@@ -332,7 +348,7 @@ The function should return the product of the two parameters
 You should not use the ES5 function declaration or function expression syntax in your final solution
 */
 
-// Code here
+let multiply = (num1, num2) => num1 * num2
 
 
 
@@ -345,7 +361,9 @@ The function should return a single concatenated (joined) str of str1 and str2
 You should not use the ES5 function declaration or function expression syntax in your final solution
 */
 
-// Code here
+let concatenate = (str1, str2) => {
+    return str1 + str2
+}
 
 
 
@@ -359,7 +377,10 @@ The values of each property should correspond to its respective parameter
 You should not use the ES5 function declaration or function expression syntax in your final solution
 */
 
-// Code here
+const gemInfo = (gemType, gemSize, gemWeight) => {
+    return {gemType, gemSize, gemWeight}
+};
+
 
 
 
@@ -385,7 +406,7 @@ let jobs = [
 // Do not edit the code above.
 
 
-// Code here
+// Code Here
 
 
 
