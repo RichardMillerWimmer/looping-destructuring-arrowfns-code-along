@@ -406,8 +406,13 @@ let jobs = [
 // Do not edit the code above.
 
 
-// Code Here
 
+let identifier = () => {
+    let person = jobs.filter(elem => {
+        return elem.programmer
+    })
+    return person[0]
+};
 
 
 ////////// PROBLEM 19 //////////
@@ -421,7 +426,13 @@ You should not use the ES5 function declaration or function expression syntax in
 You should not use a for loop, but should use the filter method instead
 */
 
-// Code here
+ let evens = (array) => {
+    let newArray = array.filter((elem) => {
+        return elem % 2 === 0 
+    })
+    return newArray
+};
+
 
 
 
@@ -438,7 +449,13 @@ You should not use a for loop, but should use the filter method instead
 
 */
 
-// Code here
+let startWithLetterA = (array) => {
+    let newArray = array.filter(elem => {
+        return elem.charAt(0) === "a" 
+    })
+    // console.log(newArray)
+    return newArray
+};
 
 
 
@@ -452,8 +469,11 @@ Make sure to use arrow functions combined with the map method
 */
 
 const formalGreeting = names => {
-    // Code here
-}
+    let newArray = names.map(elem => 
+        `Hello, ${elem}`)    
+    return newArray
+};
+
 
 
 
@@ -466,6 +486,8 @@ Make sure to use arrow functions combined with the reduce method
 
 */
 
-const productOfArray = numbers => {
-    // Code here
-}
+const productOfArray = (numbers) => {
+    numbers.reduce((acc, curr) => 
+    acc + curr)
+};
+
